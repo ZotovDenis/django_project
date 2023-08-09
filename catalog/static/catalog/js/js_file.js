@@ -1,0 +1,1 @@
+<script type="text/javascript" src="/static/catalog/js/js_file.js"></script>
