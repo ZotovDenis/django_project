@@ -1,0 +1,42 @@
+[
+  {
+    "model": "catalog.category",
+    "pk": 16,
+    "fields": {
+      "name": "Одежда",
+      "description": ""
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 17,
+    "fields": {
+      "name": "Электроника",
+      "description": ""
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 18,
+    "fields": {
+      "name": "Мебель",
+      "description": ""
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 19,
+    "fields": {
+      "name": "Сувениры",
+      "description": ""
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 20,
+    "fields": {
+      "name": "Книги",
+      "description": ""
+    }
+  }
+]

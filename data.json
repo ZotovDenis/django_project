@@ -1,0 +1,146 @@
+[
+  {
+    "model": "catalog.category",
+    "pk": 16,
+    "fields": {
+      "name": "Одежда",
+      "description": ""
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 17,
+    "fields": {
+      "name": "Электроника",
+      "description": ""
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 18,
+    "fields": {
+      "name": "Мебель",
+      "description": ""
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 19,
+    "fields": {
+      "name": "Сувениры",
+      "description": ""
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 20,
+    "fields": {
+      "name": "Книги",
+      "description": ""
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 15,
+    "fields": {
+      "name": "Худи",
+      "description": null,
+      "image": "",
+      "category": 16,
+      "price": 2500,
+      "date_create": null,
+      "last_modified_data": null
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 16,
+    "fields": {
+      "name": "Электронная книга",
+      "description": null,
+      "image": "",
+      "category": 17,
+      "price": 7000,
+      "date_create": null,
+      "last_modified_data": null
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 17,
+    "fields": {
+      "name": "Компьютерный стул",
+      "description": null,
+      "image": "",
+      "category": 18,
+      "price": 10000,
+      "date_create": null,
+      "last_modified_data": null
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 18,
+    "fields": {
+      "name": "Стикеры Skypro",
+      "description": null,
+      "image": "",
+      "category": 19,
+      "price": 500,
+      "date_create": null,
+      "last_modified_data": null
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 19,
+    "fields": {
+      "name": "Грокаем алгоритмы. Иллюстрированное пособие для программистов и любопытствующих (2017)",
+      "description": null,
+      "image": "",
+      "category": 20,
+      "price": 1500,
+      "date_create": null,
+      "last_modified_data": null
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 20,
+    "fields": {
+      "name": "Футболка с принтом",
+      "description": null,
+      "image": "",
+      "category": 16,
+      "price": 2000,
+      "date_create": null,
+      "last_modified_data": null
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 21,
+    "fields": {
+      "name": "Мышка Logitech",
+      "description": null,
+      "image": "",
+      "category": 17,
+      "price": 1000,
+      "date_create": null,
+      "last_modified_data": null
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 22,
+    "fields": {
+      "name": "Чистый Python. Тонкости программирования для профи (2018)",
+      "description": "Автор: Бейдер Д.",
+      "image": "",
+      "category": 20,
+      "price": 1700,
+      "date_create": null,
+      "last_modified_data": null
+    }
+  }
+]
