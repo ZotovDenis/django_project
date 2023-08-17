@@ -1,0 +1,18 @@
+{% load my_tags %}
+
+<div class="col-3">
+    <div class="card mb-4 box-shadow">
+        <div class="card-header">
+            <h4 class="my-0 font-weight-normal">{{ object.name|slice:18 }}</h4>
+        </div>
+        <div class="card-body">
+            <img class="card-img-top" src="{{ object.image|mymedia }}" alt="product">
+            <h1 class="card-title pricing-card-title">{{ object.price }} ₽</h1>
+
+            <p>{{ object.description|slice:40 }}</p>
+            <button type="button" class="btn btn-lg btn-block btn-outline-success">Купить</button>
+            <a href="{% url 'catalog:product_info' object.pk %}" class="btn btn-lg btn-block btn-outline-primary">Читать
+                далее</a>
+        </div>
+    </div>
+</div>
