@@ -12,7 +12,7 @@
 <div class="container">
     <div class="row featurette box-shadow">
         <div class="col-md-7">
-            <h4 class="my-0 font-weight-normal">{{ product.name|title }}</h4>
+            <h4 class="my-0 font-weight-normal">{{ object.title }}</h4>
             <p>{{ product.description }}</p>
         </div>
         <div class="col-md-5">
@@ -23,7 +23,6 @@
             <button type="button" class="btn btn-lg btn-block btn-outline-success">Купить</button>
         </div>
     </div>
-
-
-    {% endblock %}
 </div>
+
+{% endblock %}
