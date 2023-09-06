@@ -12,10 +12,12 @@
 <div class="container">
     <div class="row text-center">
         {% for object in products %}
-        {% include 'catalog/layouts/layout_card_product.html' %}
+            {% include 'catalog/layouts/layout_card_product.html' %}
         {% endfor %}
     </div>
 
-
-    {% endblock %}
+    <a href="{% url 'catalog:create_product' %}" class="btn btn-primary">Добавить продукт</a>
+    <a href="{% url 'catalog:create_version' %}" class="btn btn-outline-primary">Добавить версию</a>
 </div>
+
+{% endblock %}

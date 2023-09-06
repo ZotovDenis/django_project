@@ -10,6 +10,13 @@
             <h1 class="card-title pricing-card-title">{{ object.price }} ₽</h1>
 
             <p>{{ object.description|slice:40 }}</p>
+
+            {% for version in object.version_set.all %}
+                {% if version.is_active %}
+                    <li>Версия продукта: {{ version }}</li>
+                {% endif %}
+            {% endfor %}
+
             <button type="button" class="btn btn-lg btn-block btn-outline-success">Купить</button>
             <a href="{% url 'catalog:product_detail' object.pk %}" class="btn btn-lg btn-block btn-outline-primary">Читать
                 далее</a>
