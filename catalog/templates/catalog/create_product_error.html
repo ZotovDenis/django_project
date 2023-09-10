@@ -1,0 +1,17 @@
+{% extends 'catalog/layouts/layout_base.html' %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-6 mx-auto text-center">
+            <div class="alert alert-danger">
+                <h3 class="alert-heading">Ошибка!</h3>
+                <p>Вы не авторизованы. Для работы с продуктами Вам необходимо авторизоваться.</p>
+            </div>
+            <a class="btn btn-success btn-lg" href="{% url 'users:login' %}">Войти</a>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,5 +1,6 @@
 from django.urls import path
 
+from catalog import views
 from catalog.apps import CatalogConfig
 from catalog.views import CategoryListView, ContactsView, ProductListView, ProductDetailView, ProductCreateView, \
     ProductUpdateView, VersionCreateView

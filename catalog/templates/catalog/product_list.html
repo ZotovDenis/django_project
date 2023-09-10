@@ -16,8 +16,10 @@
         {% endfor %}
     </div>
 
+    {% if request.user.is_authenticated %}
     <a href="{% url 'catalog:create_product' %}" class="btn btn-primary">Добавить продукт</a>
     <a href="{% url 'catalog:create_version' %}" class="btn btn-outline-primary">Добавить версию</a>
+    {% endif %}
 </div>
 
 {% endblock %}

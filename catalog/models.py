@@ -1,5 +1,6 @@
 from django.db import models
 
+from users.models import User
 
 NULLABLE = {'blank': True, 'null': True}
 
@@ -10,7 +11,6 @@ class Category(models.Model):
     description = models.TextField(**NULLABLE, verbose_name='Описание')
 
     def __str__(self):
-        # Строковое отображение объекта
         return f'{self.name}'
 
     class Meta:
@@ -27,9 +27,9 @@ class Product(models.Model):
     price = models.IntegerField(verbose_name='Цена')
     date_create = models.DateField(**NULLABLE, verbose_name='Дата создания')
     last_modified_data = models.DateField(**NULLABLE, verbose_name='Дата последнего изменения')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Создатель продукта', default=2)
 
     def __str__(self):
-        # Строковое отображение объекта
         return f'{self.name}: {self.price}'
 
     class Meta:

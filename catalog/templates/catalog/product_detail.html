@@ -26,6 +26,12 @@
             <h1 class="card-title pricing-card-title">{{ product.price }} ₽</h1>
             <button type="button" class="btn btn-lg btn-block btn-outline-success">Купить</button>
         </div>
+
+        {% if object.user == request.user %}
+        <a href="{% url 'catalog:update_product' object.pk %}" class="btn btn-sm btn-block btn-outline-warning"
+           style="margin-top: 10px;">Изменить
+            продукт</a>
+        {% endif %}
     </div>
 </div>
 

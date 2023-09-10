@@ -12,14 +12,20 @@
             <p>{{ object.description|slice:40 }}</p>
 
             {% for version in object.version_set.all %}
-                {% if version.is_active %}
-                    <li>Версия продукта: {{ version }}</li>
-                {% endif %}
+            {% if version.is_active %}
+            <li>Версия продукта: {{ version }}</li>
+            {% endif %}
             {% endfor %}
 
             <button type="button" class="btn btn-lg btn-block btn-outline-success">Купить</button>
             <a href="{% url 'catalog:product_detail' object.pk %}" class="btn btn-lg btn-block btn-outline-primary">Читать
                 далее</a>
+
+            {% if object.user == request.user %}
+            <a href="{% url 'catalog:update_product' object.pk %}" class="btn btn-sm btn-block btn-outline-warning">Изменить
+                продукт</a>
+            {% endif %}
+
         </div>
     </div>
 </div>
