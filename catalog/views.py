@@ -81,7 +81,7 @@ class ProductCreateView(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
     def handle_no_permission(self):
-        return render(self.request, 'catalog/create_product_error.html', status=403)
+        return render(self.request, 'catalog/create_product_error.html')
 
 
 class ProductUpdateView(LoginRequiredMixin, UpdateView):
@@ -92,7 +92,7 @@ class ProductUpdateView(LoginRequiredMixin, UpdateView):
     def dispatch(self, request, *args, **kwargs):
         obj = self.get_object()
         if obj.user != self.request.user:
-            return HttpResponseForbidden()
+            return render(self.request, 'catalog/create_version_error.html')
         return super().dispatch(request, *args, **kwargs)
 
 
