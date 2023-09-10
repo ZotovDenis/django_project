@@ -37,7 +37,7 @@ class ProductForm(forms.ModelForm):
 
     def clean_name(self):
         name = self.cleaned_data['name']
-        forbidden_words = ['казино', 'биржа', 'криптовалюта', 'дешево', 'бесплатно', 'даром', 'обман', 'полиция',
+        forbidden_words = ['казино', 'биржа', 'наркотики', 'дешево', 'бесплатно', 'даром', 'обман', 'полиция',
                            'радар']
         for word in forbidden_words:
             if word in name.lower():
