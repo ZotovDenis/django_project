@@ -1,4 +1,7 @@
+
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.core.cache import cache
+
 from django.http import HttpResponseForbidden
 from django.shortcuts import render
 from django.urls import reverse_lazy
@@ -8,9 +11,27 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from catalog.forms import ProductForm, VersionForm
 from catalog.models import Product, Category, Version
 
+from config.settings import CACHE_ENABLED
+
 
 class CategoryListView(ListView):
     model = Category
+    template_name = 'catalog/category_list.html'
+
+    def get_context_data(self, **kwargs):
+        context_data = super().get_context_data(**kwargs)
+        if CACHE_ENABLED:
+            key = 'categories_list'
+            categories_list = cache.get(key)
+            if categories_list is None:
+                categories_list = self.model.objects.all()
+                cache.set(key, categories_list)
+        else:
+            categories_list = self.model.objects.all()
+
+        context_data['categories'] = categories_list
+        return context_data
+
 
 
 class ContactsView(View):

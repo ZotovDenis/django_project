@@ -11,7 +11,7 @@
 
 <div class="container">
     <div class="row text-center">
-        {% for object in object_list %}
+        {% for object in categories.all %}
         {% include 'catalog/layouts/layout_card_categories.html' %}
         {% endfor %}
     </div>
